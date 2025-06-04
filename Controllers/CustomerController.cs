@@ -2,6 +2,7 @@
 using CustomerPortal.Models;
 using CustomerPortal.Data;
 using CustomerPortal.Models.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace CustomerPortal.Controllers
 {
@@ -37,6 +38,12 @@ namespace CustomerPortal.Controllers
             await app1.customers.AddAsync(cusObj);
             await app1.SaveChangesAsync();
             return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> List() {
+           var customers = await app1.customers.ToListAsync();
+            return View(customers);
         }
     }
 }

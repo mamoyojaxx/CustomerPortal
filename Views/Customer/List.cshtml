@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<CustomerPortal.Models.Entities.Customer>
+
+<h1>Customer Records</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Region</th>
+            <th>Subscription</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var cust in Model)
+        {
+            <tr>
+                <td>@cust.CustomerID</td>
+                <td>@cust.CustomerName</td>
+                <td>@cust.CustomerEmail</td>
+                <td>@cust.CustomerPhone</td>
+                <td>@cust.CustomerCity</td>
+                <td>@cust.CustomerRegion</td>
+                <td>@cust.isSubscribed</td>
+                <td><a href="#">Edit Info</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
