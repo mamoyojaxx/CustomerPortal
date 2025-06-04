@@ -11,6 +11,6 @@ namespace CustomerPortal.Data
             
         }
         //Creates the table which holds the values in your dataset
-        public DbSet<Customer>customers { get; set; }
+        public DbSet<Customer>Customers { get; set; }
     }
 }

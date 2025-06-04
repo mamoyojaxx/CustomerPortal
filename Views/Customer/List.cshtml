@@ -31,7 +31,7 @@
                 <td>@cust.CustomerCity</td>
                 <td>@cust.CustomerRegion</td>
                 <td>@cust.isSubscribed</td>
-                <td><a href="#">Edit Info</a></td>
+                <td><a asp-controller="Customer" asp-action="Update" asp-route-id="@cust.CustomerID">Edit Info</a></td>
             </tr>
         }
     </tbody>
